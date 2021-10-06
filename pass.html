@@ -17,6 +17,7 @@
     </form>
 
     <p id="pharse_Result">It is the pharsed text.</p>
+    <img id= "animal" src="Easternbluebird.jpg"  alt="blue_bird"  width="200" height="200" onclick="newImage()">  
 
     <script>
         var correct = 0;
@@ -38,6 +39,32 @@
             out = document.getElementById("pharse_Result")
             out.innerHTML = "Correct guess count: " + correct + "<br>" + "Wrong guess count: " + wrong;
         }
+        
+        var usingImage=1;
+        function newImage(){
+
+        switch(usingImage){
+
+        case 1:
+
+        document.getElementById("animal").src="Easternbluebird.jpg"
+        usingImage=2
+        break   
+ 
+        case 2:
+
+        document.getElementById("animal").src="Gentoo penguin.jpg"
+        usingImage=3
+        break  
+
+        case 3:
+
+        document.getElementById("animal").src="Malayan Tiger.jpg"
+        usingImage=1
+        break  
+        }
+    }
+
     </script>
 
 </body>
