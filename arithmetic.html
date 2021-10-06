@@ -21,6 +21,32 @@
 
 <p id="result">This text will be replaced </p>
 
+
+<form>
+        <input type="radio" class="form-check-input" id="rg1_plus" name="operators" value="plus"
+            onclick="processRadio()">
+        <label for="rg1_plus" class="form-check-label">+</label></br>
+  
+
+        <input type="radio" class="form-check-input" id="rg1_minus" name="operators" value="minus"
+            onclick="processRadio()">
+        <label for="rg1_minus" class="form-check-label">-</label></br>
+  
+
+        <input type="radio" class="form-check-input" id="rg1_times" name="operators" value="times"
+            onclick="processRadio()">
+        <label for="rg1_times" class="form-check-label">*</label></br>
+  
+        <input type="radio" class="form-check-input" id="rg1_divide  " name="operators" value="divide"
+            onclick="processRadio()">
+        <label for="rg1_divide" class="form-check-label">/</label></br>
+  
+</form>
+<br>
+<p id="result2">This text will be replaced </p>
+<br>
+
+
 <script> 
 
 function powers() {
@@ -37,7 +63,37 @@ function powers() {
             out.innerHTML = "Powers of " + base + " are: " + res
 
         }
-</script>
+
+        function processRadio() {
+            base = parseInt(document.getElementById("form_base").value)
+            exponent = parseInt(document.getElementById("form_exponent").value)
+            operation = document.getElementsByName("operators")
+            sign = ""
+            for (i = 0; i < operation.length; i++) {
+                if (operation[i].checked) {
+                    sign = operation[i].value
+                }
+            }
+
+            var a = 0
+            switch (sign) {
+                case "plus":
+                    a = base + exponent;
+                    break;
+                case "minus":
+                    a = base - exponent;
+                    break;
+                case "times":
+                    a = base * exponent;
+                    break;
+                case "divide":
+                    a = base / exponent;
+                    break;
+            }
+            get = document.getElementById("result2")
+            get.innerHTML = "Solution of " + base + " " + sign + " " + exponent + " is : " + a
+        }
+        </script>
 
 </body>
 </html> 
