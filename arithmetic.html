@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>
+         arithmetic functions
+     </title>
+ </head>
+<body>
+
+<h2>computes by Tejaswi Gannamaneni</h2>
+
+<form>
+        <label for="form_base" class="form-label">Enter a base </label>
+        <input type="number" class="form-control" id="form_base" name="form_base" value=10> <br>
+
+        <label for="form_exponent" class="form-label">Enter an exponent </label>
+        <input type="number" class="form-control" id="form_exponent" name="form_exponent" value=2> <br>
+
+    <input type="button" class="btn btn-primary" onclick="powers()" value="Compute">
+</form>
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+function powers() {
+            base = document.getElementById("form_base").value
+            exponent = document.getElementById("form_exponent").value
+            res = "";
+
+            for (i = 1; i <= exponent; i++) {
+                a = Math.pow(base, i);
+
+                res = res + a + " ";
+            }
+            out = document.getElementById("result")
+            out.innerHTML = "Powers of " + base + " are: " + res
+
+        }
+</script>
+
+</body>
+</html> 
