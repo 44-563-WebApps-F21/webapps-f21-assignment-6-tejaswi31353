@@ -4,4 +4,4 @@ Assignment introduction Java Script and DOM
 
 Hosted Links-
 
-[arithmetic]()https://github.com/44-563-WebApps-F21/webapps-f21-assignment-6-tejaswi31353/blob/main/arithmetic.html<br>
+[arithmetic](https://github.com/44-563-WebApps-F21/webapps-f21-assignment-6-tejaswi31353/blob/main/arithmetic.html)<br>
