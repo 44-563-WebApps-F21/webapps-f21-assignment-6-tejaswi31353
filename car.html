@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html>
- <head>
-     <title>
-         car page
-     </title>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-         crossorigin="anonymous"></script>
- </head>
+
+<head>
+    <title>
+        car page
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
 <body style="background-color: darkgoldenrod;">
 
 
 
-<form>
-    <div class="container">
-    <h2>orders a car by Tejaswi Gannamaneni</h2>
-        <input type="checkbox" class="form-check-input" id="electric"  value="electric">
-        <label for="electric" class="form-check-label">electric</label></br>
-    
-
-        <input type="checkbox" class="form-check-input" id="ac"  value="ac">
-        <label for="ac" class="form-check-label">ac</label></br>
-    
-
-        <input type="checkbox" class="form-check-input" id="gps"  value="gps">
-        <label for="gps" class="form-check-label">gps</label></br>
-        
-    
-    <input type="button" class="btn btn-primary" onclick="orderCar()" value="Order a car">
-    <p id="result">This text will be replaced </p>
-</div>
-</form>
-
-<form>
-    <div class="container">
-        <label for="form_property" class="form-label">Enter a property</label>
-        <input type="text" class="form-control" id="form_property" name="form_property" value="color">
-    
-    
-        <label for="form_value" class="form-label">Enter a value</label>
-        <input type="text" class="form-control" id="form_value" name="form_value" autofocus> 
-    
-    <input type="button" class="btn btn-primary" onclick="updateCar()" value="Update the car">
-    <p id="result1">This text will be replaced </p>
-</div>
-</form>
+    <form>
+        <div class="container">
+            <h2>orders a car by Tejaswi Gannamaneni</h2>
+            <input type="checkbox" class="form-check-input" id="electric" value="electric">
+            <label for="electric" class="form-check-label">electric</label></br>
 
 
+            <input type="checkbox" class="form-check-input" id="ac" value="ac">
+            <label for="ac" class="form-check-label">ac</label></br>
 
-<script> 
- my_car = ""
+
+            <input type="checkbox" class="form-check-input" id="gps" value="gps">
+            <label for="gps" class="form-check-label">gps</label></br>
+
+
+            <input type="button" class="btn btn-primary" onclick="orderCar()" value="Order a car">
+            <p id="result">This text will be replaced </p>
+        </div>
+    </form>
+
+    <form>
+        <div class="container">
+            <label for="form_property" class="form-label">Enter a property</label>
+            <input type="text" class="form-control" id="form_property" name="form_property" value="color">
+
+
+            <label for="form_value" class="form-label">Enter a value</label>
+            <input type="text" class="form-control" id="form_value" name="form_value" autofocus>
+
+            <input type="button" class="btn btn-primary" onclick="updateCar()" value="Update the car">
+            <p id="result1">This text will be replaced </p>
+        </div>
+    </form>
+
+
+
+    <script>
+        my_car = ""
         function orderCar() {
             my_car = ""
             isElectric = document.getElementById("electric").checked
@@ -89,7 +91,8 @@
             out.innerHTML = my_car
         }
 
-</script>
+    </script>
 
 </body>
-</html> 
+
+</html>
